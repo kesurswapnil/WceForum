@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby '2.3.4'
 gem 'nokogiri', '~> 1.8'
 gem 'rails', '4.2.5'
 gem 'sass-rails', '~> 5.0'
