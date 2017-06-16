@@ -1,0 +1,14 @@
+<h1 align="center">Forum Users</h1>
+<div align="center">
+<% @users.each do |user| %>
+
+<div class="row">
+<div class="well col-md-4 col-md-offset-4">
+
+
+<h3 align="center"> <%=  user.username %></h3> <br>
+<small><%= pluralize(user.articles.count, "article") if user.articles %></small>
+</div>
+</div>
+<% end %>
+</div>
