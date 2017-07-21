@@ -18,9 +18,19 @@
  <%= bootstrap_flash %>
 <div class='container'>
   <%= yield %>
+  <script type="text/javascript">
+  ( function() {
+    if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
+    var unit = {"calltype":"async[2]","publisher":"kesurswapnil","width":550,"height":250,"sid":"Chitika Default"};
+    var placement_id = window.CHITIKA.units.length;
+    window.CHITIKA.units.push(unit);
+    document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+}());
+</script>
+<script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
 </div>
 
-<%= render 'layouts/foot' %>
+
 <script type="text/javascript">
   var vglnk = { key: '92d2820cfcce6993c4cd683d6962bf30' };
 
@@ -30,5 +40,6 @@
     var r = d.getElementsByTagName(t)[0]; r.parentNode.insertBefore(s, r);
   }(document, 'script'));
 </script>
+  <%= render 'layouts/foot' %>
 </body>
 </html>
